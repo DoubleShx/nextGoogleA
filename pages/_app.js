@@ -6,6 +6,7 @@ const App = ({ Component, pageProps }) => {
   const router = useRouter()
   useEffect(() => {
     const handleRouteChange = (url) => {
+      console.log('page')
       gtag.pageview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
